@@ -1,0 +1,1 @@
+D:\dev\MAUI\MinhasCompras\MinhasCompras.csproj;x64

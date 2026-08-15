@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- tela responsavel por cadastrar ou editar um produto -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhasCompras.Views.NovoProduto"
+             Title="Novo Produto">
+
+    <!-- pilha vertical que organiza os campos de entrada na tela -->
+    <VerticalStackLayout Padding="16" Spacing="12">
+
+        <!-- rotulo do campo de descricao -->
+        <Label Text="Descricao" />
+
+        <!-- campo de texto para digitar a descricao do produto -->
+        <Entry x:Name="CampoDescricao"
+               Placeholder="Digite a descricao" />
+
+        <!-- rotulo do campo de quantidade -->
+        <Label Text="Quantidade" />
+
+        <!-- campo de texto numerico para digitar a quantidade -->
+        <Entry x:Name="CampoQuantidade"
+               Placeholder="Digite a quantidade"
+               Keyboard="Numeric" />
+
+        <!-- rotulo do campo de preco -->
+        <Label Text="Preco" />
+
+        <!-- campo de texto numerico para digitar o preco -->
+        <Entry x:Name="CampoPreco"
+               Placeholder="Digite o preco"
+               Keyboard="Numeric" />
+
+        <!-- botao que salva o produto no banco de dados -->
+        <Button x:Name="BotaoSalvar"
+                Text="Salvar"
+                Clicked="AoSalvarProduto" />
+    </VerticalStackLayout>
+</ContentPage>

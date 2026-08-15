@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- tela responsavel por listar todos os produtos cadastrados -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MinhasCompras.Models"
+             x:Class="MinhasCompras.Views.ListaProduto"
+             Title="Lista de Produtos">
+
+    <!-- grade principal que organiza o botao e a lista na tela -->
+    <Grid RowDefinitions="Auto,*"
+          Padding="16"
+          RowSpacing="12">
+
+        <!-- botao que abre a tela de cadastro de um novo produto -->
+        <Button x:Name="BotaoNovoProduto"
+                Grid.Row="0"
+                Text="Novo Produto"
+                Clicked="AoAdicionarProduto" />
+
+        <!-- lista que exibe os produtos vindos do banco de dados -->
+        <CollectionView x:Name="ListaProdutos"
+                        Grid.Row="1"
+                        SelectionMode="None">
+
+            <!-- modelo visual de cada item da lista -->
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Produto">
+
+                    <!-- grade que organiza os dados e os botoes de cada produto -->
+                    <Grid ColumnDefinitions="*,Auto,Auto"
+                          Padding="8"
+                          ColumnSpacing="8">
+
+                        <!-- bloco com a descricao, a quantidade e o preco do produto -->
+                        <VerticalStackLayout Grid.Column="0">
+                            <Label Text="{Binding Descricao}"
+                                   FontSize="18"
+                                   FontAttributes="Bold" />
+                            <Label Text="{Binding Quantidade, StringFormat='Quantidade: {0}'}" />
+                            <Label Text="{Binding Preco, StringFormat='Preco: {0:C}'}" />
+                        </VerticalStackLayout>
+
+                        <!-- botao que edita o produto desta linha -->
+                        <Button Grid.Column="1"
+                                Text="Editar"
+                                Clicked="AoEditarProduto"
+                                CommandParameter="{Binding .}" />
+
+                        <!-- botao que exclui o produto desta linha -->
+                        <Button Grid.Column="2"
+                                Text="Excluir"
+                                Clicked="AoExcluirProduto"
+                                CommandParameter="{Binding .}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
