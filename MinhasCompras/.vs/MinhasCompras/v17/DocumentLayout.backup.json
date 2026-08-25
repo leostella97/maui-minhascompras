@@ -1,33 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\dev\\MAUI\\MinhasCompras\\",
+  "WorkspaceRootPath": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|d:\\dev\\maui\\minhascompras\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|c:\\users\\marbrasil\\source\\repos\\maui-minhascompras\\minhascompras\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|solutionrelative:models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|d:\\dev\\maui\\minhascompras\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|c:\\users\\marbrasil\\source\\repos\\maui-minhascompras\\minhascompras\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|d:\\dev\\maui\\minhascompras\\helpers\\sqlitedatabasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|c:\\users\\marbrasil\\source\\repos\\maui-minhascompras\\minhascompras\\helpers\\sqlitedatabasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|solutionrelative:helpers\\sqlitedatabasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|d:\\dev\\maui\\minhascompras\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|c:\\users\\marbrasil\\source\\repos\\maui-minhascompras\\minhascompras\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|d:\\dev\\maui\\minhascompras\\views\\novoproduto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|c:\\users\\marbrasil\\source\\repos\\maui-minhascompras\\minhascompras\\views\\novoproduto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|solutionrelative:views\\novoproduto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|d:\\dev\\maui\\minhascompras\\views\\listaproduto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|c:\\users\\marbrasil\\source\\repos\\maui-minhascompras\\minhascompras\\views\\listaproduto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|solutionrelative:views\\listaproduto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|d:\\dev\\maui\\minhascompras\\minhascompras.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|c:\\users\\marbrasil\\source\\repos\\maui-minhascompras\\minhascompras\\minhascompras.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{AAFAE65D-A2F9-41DA-A7DD-ED61B30BCAD5}|MinhasCompras.csproj|solutionrelative:minhascompras.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -44,9 +44,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Produto.cs",
-              "DocumentMoniker": "D:\\dev\\MAUI\\MinhasCompras\\Models\\Produto.cs",
+              "DocumentMoniker": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\Models\\Produto.cs",
               "RelativeDocumentMoniker": "Models\\Produto.cs",
-              "ToolTip": "D:\\dev\\MAUI\\MinhasCompras\\Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\Models\\Produto.cs",
               "RelativeToolTip": "Models\\Produto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -57,79 +57,73 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\dev\\MAUI\\MinhasCompras\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
-              "ToolTip": "D:\\dev\\MAUI\\MinhasCompras\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\MainPage.xaml",
               "RelativeToolTip": "MainPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-08-15T06:58:18.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-15T06:58:18.459Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "SQLiteDatabaseHelper.cs",
-              "DocumentMoniker": "D:\\dev\\MAUI\\MinhasCompras\\Helpers\\SQLiteDatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\Helpers\\SQLiteDatabaseHelper.cs",
               "RelativeDocumentMoniker": "Helpers\\SQLiteDatabaseHelper.cs",
-              "ToolTip": "D:\\dev\\MAUI\\MinhasCompras\\Helpers\\SQLiteDatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\Helpers\\SQLiteDatabaseHelper.cs",
               "RelativeToolTip": "Helpers\\SQLiteDatabaseHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T06:57:56.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-15T06:57:56.623Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "App.xaml",
-              "DocumentMoniker": "D:\\dev\\MAUI\\MinhasCompras\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "D:\\dev\\MAUI\\MinhasCompras\\App.xaml",
+              "ToolTip": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-08-15T06:57:52.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-15T06:57:52.756Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "NovoProduto.xaml",
-              "DocumentMoniker": "D:\\dev\\MAUI\\MinhasCompras\\Views\\NovoProduto.xaml",
+              "DocumentMoniker": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\Views\\NovoProduto.xaml",
               "RelativeDocumentMoniker": "Views\\NovoProduto.xaml",
-              "ToolTip": "D:\\dev\\MAUI\\MinhasCompras\\Views\\NovoProduto.xaml",
+              "ToolTip": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\Views\\NovoProduto.xaml",
               "RelativeToolTip": "Views\\NovoProduto.xaml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-08-15T06:57:39.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-15T06:57:39.038Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "ListaProduto.xaml",
-              "DocumentMoniker": "D:\\dev\\MAUI\\MinhasCompras\\Views\\ListaProduto.xaml",
+              "DocumentMoniker": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\Views\\ListaProduto.xaml",
               "RelativeDocumentMoniker": "Views\\ListaProduto.xaml",
-              "ToolTip": "D:\\dev\\MAUI\\MinhasCompras\\Views\\ListaProduto.xaml",
+              "ToolTip": "C:\\Users\\MarBrasil\\source\\repos\\maui-minhascompras\\MinhasCompras\\Views\\ListaProduto.xaml",
               "RelativeToolTip": "Views\\ListaProduto.xaml",
               "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-08-15T06:57:21.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-15T06:57:21.618Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MinhasCompras",
-              "DocumentMoniker": "D:\\dev\\MAUI\\MinhasCompras\\MinhasCompras.csproj",
+              "Title": "MinhasCompras.csproj",
+              "DocumentMoniker": "C:\\Users\\MarBrasil\\Source\\Repos\\maui-minhascompras\\MinhasCompras\\MinhasCompras.csproj",
               "RelativeDocumentMoniker": "MinhasCompras.csproj",
-              "ToolTip": "D:\\dev\\MAUI\\MinhasCompras\\MinhasCompras.csproj",
+              "ToolTip": "C:\\Users\\MarBrasil\\Source\\Repos\\maui-minhascompras\\MinhasCompras\\MinhasCompras.csproj",
               "RelativeToolTip": "MinhasCompras.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-08-15T06:55:49.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-15T06:55:49.947Z"
             }
           ]
         }

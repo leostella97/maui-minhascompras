@@ -12,49 +12,49 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MinhasCompras
-build_property.ProjectDir = D:\dev\MAUI\MinhasCompras\
+build_property.ProjectDir = C:\Users\MarBrasil\source\repos\maui-minhascompras\MinhasCompras\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/dev/MAUI/MinhasCompras/App.xaml]
+[C:/Users/MarBrasil/source/repos/maui-minhascompras/MinhasCompras/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MinhasCompras.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[D:/dev/MAUI/MinhasCompras/AppShell.xaml]
+[C:/Users/MarBrasil/source/repos/maui-minhascompras/MinhasCompras/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MinhasCompras.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[D:/dev/MAUI/MinhasCompras/MainPage.xaml]
+[C:/Users/MarBrasil/source/repos/maui-minhascompras/MinhasCompras/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MinhasCompras.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[D:/dev/MAUI/MinhasCompras/Resources/Styles/Colors.xaml]
+[C:/Users/MarBrasil/source/repos/maui-minhascompras/MinhasCompras/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MinhasCompras.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[D:/dev/MAUI/MinhasCompras/Resources/Styles/Styles.xaml]
+[C:/Users/MarBrasil/source/repos/maui-minhascompras/MinhasCompras/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MinhasCompras.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[D:/dev/MAUI/MinhasCompras/Views/ListaProduto.xaml]
+[C:/Users/MarBrasil/source/repos/maui-minhascompras/MinhasCompras/Views/ListaProduto.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MinhasCompras.Views.ListaProduto.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ListaProduto.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ListaProduto.xaml
 
-[D:/dev/MAUI/MinhasCompras/Views/NovoProduto.xaml]
+[C:/Users/MarBrasil/source/repos/maui-minhascompras/MinhasCompras/Views/NovoProduto.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MinhasCompras.Views.NovoProduto.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\NovoProduto.xaml

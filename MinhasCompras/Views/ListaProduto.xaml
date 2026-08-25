@@ -6,20 +6,26 @@
              x:Class="MinhasCompras.Views.ListaProduto"
              Title="Lista de Produtos">
 
-    <!-- grade principal que organiza o botao e a lista na tela -->
-    <Grid RowDefinitions="Auto,*"
+    <!-- grade principal que organiza a busca, o botao e a lista na tela -->
+    <Grid RowDefinitions="Auto,Auto,*"
           Padding="16"
           RowSpacing="12">
 
+        <!-- campo de busca que filtra os produtos em tempo real enquanto digita -->
+        <SearchBar x:Name="BuscaProdutos"
+                   Grid.Row="0"
+                   Placeholder="Digite para buscar..."
+                   TextChanged="OnSearchTextChanged" />
+
         <!-- botao que abre a tela de cadastro de um novo produto -->
         <Button x:Name="BotaoNovoProduto"
-                Grid.Row="0"
+                Grid.Row="1"
                 Text="Novo Produto"
                 Clicked="AoAdicionarProduto" />
 
         <!-- lista que exibe os produtos vindos do banco de dados -->
         <CollectionView x:Name="ListaProdutos"
-                        Grid.Row="1"
+                        Grid.Row="2"
                         SelectionMode="None">
 
             <!-- modelo visual de cada item da lista -->

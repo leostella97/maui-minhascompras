@@ -13,13 +13,13 @@
           "Microsoft.Maui.Controls": "8.0.100",
           "Microsoft.Maui.Controls.Compatibility": "8.0.100",
           "sqlite-net-pcl": "1.11.285",
-          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
+          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.56"
         },
         "runtime": {
           "MinhasCompras.dll": {}
         }
       },
-      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.57": {
+      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.56": {
         "runtime": {
           "Microsoft.Windows.SDK.NET.dll": {
             "assemblyVersion": "10.0.19041.38",
@@ -493,7 +493,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.57": {
+    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.56": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""

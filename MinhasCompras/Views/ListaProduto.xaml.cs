@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel; // importa a ObservableCollection que avisa a tela quando a lista muda
 using MinhasCompras.Helpers; // importa o helper de acesso ao banco
 using MinhasCompras.Models; // importa a classe Produto usada na listagem
 
@@ -7,12 +8,19 @@ namespace MinhasCompras.Views // agrupa as telas do aplicativo
     {
         readonly SQLiteDatabaseHelper bancoDados; // helper responsavel pelas operacoes no banco
 
+        // colecao que guarda os produtos mostrados na tela
+        // usei ObservableCollection porque ela avisa sozinha a CollectionView quando adiciona ou remove itens
+        readonly ObservableCollection<Produto> produtosExibidos = new();
+
         // construtor da tela de listagem de produtos
         public ListaProduto()
         {
             InitializeComponent(); // liga o arquivo xaml a esta classe
 
             bancoDados = new SQLiteDatabaseHelper(App.CaminhoBancoDados); // prepara o helper com o caminho do banco
+
+            // amarra a colecao na CollectionView pra atualizar sozinha quando mudar
+            ListaProdutos.ItemsSource = produtosExibidos;
         }
 
         // metodo chamado sempre que a tela aparece para atualizar a lista
@@ -23,12 +31,44 @@ namespace MinhasCompras.Views // agrupa as telas do aplicativo
             _ = CarregarProdutos(); // recarrega os produtos do banco
         }
 
-        // busca todos os produtos do banco e preenche a collectionview
+        // busca todos os produtos do banco e preenche a colecao da tela
         private async Task CarregarProdutos()
         {
             List<Produto> produtos = await bancoDados.ObterTodosProdutos(); // obtem a lista completa do banco
 
-            ListaProdutos.ItemsSource = produtos; // exibe a lista na collectionview
+            produtosExibidos.Clear(); // limpa o que tinha antes pra nao duplicar
+
+            foreach (Produto p in produtos) // percorre cada produto retornado do banco
+            {
+                produtosExibidos.Add(p); // adiciona na colecao que esta amarrada na tela
+            }
+        }
+
+        // metodo chamado toda vez que o usuario digita ou apaga algo na barra de busca
+        // fiz async pra nao travar a tela enquanto consulta o banco
+        private async void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+        {
+            string termo = e.NewTextValue; // pega o texto atual digitado na busca
+
+            // se o campo estiver vazio ou so espaco, mostra tudo de novo
+            if (string.IsNullOrWhiteSpace(termo))
+            {
+                await CarregarProdutos(); // recarrega a lista completa do banco
+                return; // sai do metodo pra nao rodar a busca filtrada
+            }
+
+            // consulta o banco filtrando pela descricao com LIKE
+            List<Produto> resultado = await bancoDados.BuscarProdutos(termo);
+
+            produtosExibidos.Clear(); // limpa a lista anterior antes de mostrar o resultado
+
+            foreach (Produto p in resultado) // percorre cada produto encontrado na busca
+            {
+                produtosExibidos.Add(p); // adiciona na colecao e a tela atualiza sozinha
+            }
+
+            // se a busca nao retornou nada a lista fica vazia automaticamente
+            // porque limpei acima e nao adicionou nenhum item
         }
 
         // abre a tela de cadastro de um novo produto
