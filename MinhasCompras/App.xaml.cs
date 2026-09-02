@@ -2,32 +2,28 @@
 {
     public partial class App : Application
     {
-        // propriedade estatica que guarda o caminho completo do banco de dados
-        public static string CaminhoBancoDados { get; private set; } = string.Empty;
+        // propriedade estática que guarda o caminho completo do banco de dados
+        // o set é público porque a tela troca esse caminho quando a pessoa procura outro banco
+        public static string CaminhoBancoDados { get; set; } = string.Empty;
 
-        // construtor da aplicacao responsavel por preparar o banco de dados
+        // construtor da aplicação responsável por definir o caminho do banco
         public App()
         {
-            // registra no log o inicio da construcao do App para diagnostico
+            // registra no log o início da construção do App para diagnostico
             MauiProgram.RegistrarLog("App.ctor iniciado");
 
             // inicializa os componentes visuais definidos no App.xaml
             InitializeComponent();
 
-            // caminho fixo da pasta ArquivoDados que fica na raiz do projeto
-            // assim o banco fica visivel dentro da pasta do projeto e nao escondido no pacote MSIX
+            // caminho da pasta ArquivoDados que fica na raiz do projeto
+            // o arquivo Dados.db deve ja estar la, o app nao cria um banco novo
             string pastaDados = @"C:\Users\MarBrasil\source\repos\maui-minhascompras\MinhasCompras\ArquivoDados";
 
-            // cria a pasta ArquivoDados se ela ainda nao existir
-            if (!Directory.Exists(pastaDados))
-            {
-                Directory.CreateDirectory(pastaDados);
-            }
-
-            // monta o caminho do banco dentro da pasta ArquivoDados do projeto
+            // monto o caminho padrão do banco dentro da pasta ArquivoDados
+            // se esse arquivo nao existir, a tela mostra o aviso vermelho e o botao pra procurar
             CaminhoBancoDados = Path.Combine(pastaDados, "Dados.db");
 
-            // registra no log o caminho do banco para confirmar a inicializacao
+            // registra no log o caminho do banco para confirmar a inicialização
             MauiProgram.RegistrarLog($"App.CaminhoBancoDados={CaminhoBancoDados}");
 
             // define a pagina inicial do aplicativo

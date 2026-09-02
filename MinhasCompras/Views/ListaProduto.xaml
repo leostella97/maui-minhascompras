@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- tela responsavel por listar todos os produtos cadastrados -->
+<!-- tela responsável por listar todos os produtos cadastrados -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:MinhasCompras.Models"
              x:Class="MinhasCompras.Views.ListaProduto"
              Title="Lista de Produtos">
 
-    <!-- grade principal que organiza a busca, o botao e a lista na tela -->
-    <Grid RowDefinitions="Auto,Auto,*"
+    <!-- grade principal que organiza a busca, o aviso, o botao e a lista na tela -->
+    <Grid RowDefinitions="Auto,Auto,Auto,*"
           Padding="16"
           RowSpacing="12">
 
@@ -17,49 +17,88 @@
                    Placeholder="Digite para buscar..."
                    TextChanged="OnSearchTextChanged" />
 
-        <!-- botao que abre a tela de cadastro de um novo produto -->
+        <!-- aviso mostrado quando o arquivo do banco não e encontrado
+             fica escondido e aparece so quando falta o arquivo Dados.db -->
+        <VerticalStackLayout x:Name="AvisoBancoAusente"
+                             Grid.Row="1"
+                             IsVisible="False"
+                             Spacing="12">
+
+            <!-- mensagem vermelha que avisa que o banco não existe -->
+            <Label Text="Banco não encontrado"
+                   TextColor="Red"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- botão que abre o seletor de arquivos pra achar o Dados.db -->
+            <Button x:Name="BotaoProcurarBanco"
+                    Text="Procurar arquivo do banco"
+                    Clicked="AoProcurarBanco" />
+        </VerticalStackLayout>
+
+        <!-- botão que abre a tela de cadastro de um novo produto -->
         <Button x:Name="BotaoNovoProduto"
-                Grid.Row="1"
+                Grid.Row="2"
                 Text="Novo Produto"
                 Clicked="AoAdicionarProduto" />
 
-        <!-- lista que exibe os produtos vindos do banco de dados -->
-        <CollectionView x:Name="ListaProdutos"
-                        Grid.Row="2"
-                        SelectionMode="None">
+        <!-- lista que mostra os produtos vindos do banco de dados
+             usei ListView em vez de CollectionView porque ela aceita menu de contexto (ContextActions) em cada item -->
+        <ListView x:Name="ListaProdutos"
+                  Grid.Row="3"
+                  HasUnevenRows="True"
+                  SelectionMode="None"
+                  ItemTapped="AoSelecionarProduto">
 
             <!-- modelo visual de cada item da lista -->
-            <CollectionView.ItemTemplate>
+            <ListView.ItemTemplate>
                 <DataTemplate x:DataType="models:Produto">
 
-                    <!-- grade que organiza os dados e os botoes de cada produto -->
-                    <Grid ColumnDefinitions="*,Auto,Auto"
-                          Padding="8"
-                          ColumnSpacing="8">
+                    <!-- ViewCell e o espaço que envolve cada item da lista
+                         dentro dele coloca o menu de contexto -->
+                    <ViewCell>
 
-                        <!-- bloco com a descricao, a quantidade e o preco do produto -->
-                        <VerticalStackLayout Grid.Column="0">
-                            <Label Text="{Binding Descricao}"
-                                   FontSize="18"
-                                   FontAttributes="Bold" />
-                            <Label Text="{Binding Quantidade, StringFormat='Quantidade: {0}'}" />
-                            <Label Text="{Binding Preco, StringFormat='Preco: {0:C}'}" />
-                        </VerticalStackLayout>
+                        <!-- menu de contexto que aparece quando o usuario segura ou arrasta o item -->
+                        <ViewCell.ContextActions>
 
-                        <!-- botao que edita o produto desta linha -->
-                        <Button Grid.Column="1"
-                                Text="Editar"
-                                Clicked="AoEditarProduto"
-                                CommandParameter="{Binding .}" />
+                            <!-- ação que abre a tela para editar o produto -->
+                            <MenuItem Text="Editar"
+                                      Clicked="AoEditarProduto"
+                                      CommandParameter="{Binding .}" />
 
-                        <!-- botao que exclui o produto desta linha -->
-                        <Button Grid.Column="2"
-                                Text="Excluir"
-                                Clicked="AoExcluirProduto"
-                                CommandParameter="{Binding .}" />
-                    </Grid>
+                            <!-- ação que exclui o produto
+                                 IsDestructive deixa ela em vermelho por ser uma ação perigosa -->
+                            <MenuItem Text="Excluir"
+                                      Clicked="AoExcluirProduto"
+                                      CommandParameter="{Binding .}"
+                                      IsDestructive="True" />
+                        </ViewCell.ContextActions>
+
+                        <!-- grade que organiza os dados do produto e a seta de toque -->
+                        <Grid ColumnDefinitions="*,Auto"
+                              Padding="8"
+                              ColumnSpacing="8">
+
+                            <!-- bloco com a descrição, quantidade e o preco do produto -->
+                            <VerticalStackLayout Grid.Column="0">
+                                <Label Text="{Binding Descricao}"
+                                       FontSize="18"
+                                       FontAttributes="Bold" />
+                                <Label Text="{Binding Quantidade, StringFormat='Quantidade: {0}'}" />
+                                <Label Text="{Binding Preco, StringFormat='Preco: {0:C}'}" />
+                            </VerticalStackLayout>
+
+                            <!-- seta que mostra pro usuario que da pra tocar no item pra editar -->
+                            <Label Grid.Column="1"
+                                   Text=">"
+                                   FontSize="22"
+                                   VerticalOptions="Center"
+                                   TextColor="Gray" />
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </ContentPage>

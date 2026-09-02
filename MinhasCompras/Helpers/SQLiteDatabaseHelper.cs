@@ -3,16 +3,20 @@ using SQLite; // importa as classes de acesso ao banco sqlite
 
 namespace MinhasCompras.Helpers // agrupa as classes auxiliares do aplicativo
 {
+    // classe que centraliza o acesso ao banco de dados
+    // os metodos de banco podem falhar por varios motivos, por isso as telas usam try/catch
+    // e mostram uma mensagem simples pro usuario quando algum problema acontece
     public class SQLiteDatabaseHelper // classe que centraliza o acesso ao banco de dados
     {
         readonly SQLiteAsyncConnection conexao; // conexao assincrona com o banco sqlite
 
-        // construtor que recebe o caminho do banco e prepara a tabela de produtos
+        // construtor que recebe o caminho do banco e apenas le o arquivo que ja existe
+        // nao crio um arquivo novo do banco, o Dados.db precisa ter sido informado antes
         public SQLiteDatabaseHelper(string caminhoBancoDados)
         {
-            conexao = new SQLiteAsyncConnection(caminhoBancoDados); // abre a conexao com o banco
-
-            conexao.CreateTableAsync<Produto>().Wait(); // cria a tabela Produto se ela ainda nao existir
+            // abro a conexão sem a flag de Create, assim nunca gera um arquivo novo no disco
+            // se o arquivo nao existir, a primeira operação falha e a tela trata o erro
+            conexao = new SQLiteAsyncConnection(caminhoBancoDados, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.SharedCache);
         }
 
         // insere um novo produto no banco de dados
@@ -31,7 +35,7 @@ namespace MinhasCompras.Helpers // agrupa as classes auxiliares do aplicativo
         // atualiza os dados de um produto ja cadastrado
         public Task<int> AtualizarProduto(Produto produto)
         {
-            return conexao.UpdateAsync(produto); // aplica as alteracoes do produto no banco
+            return conexao.UpdateAsync(produto); // aplica as alterações do produto no banco
         }
 
         // remove um produto do banco a partir do id informado
@@ -46,7 +50,7 @@ namespace MinhasCompras.Helpers // agrupa as classes auxiliares do aplicativo
             return conexao.Table<Produto>().ToListAsync(); // consulta a tabela inteira e devolve a lista
         }
 
-        // busca produtos pela descricao usando a instrucao sql com like
+        // busca produtos pela descrição usando a instrução sql com like
         public Task<List<Produto>> BuscarProdutos(string termo)
         {
             string sql = "SELECT * FROM Produto WHERE Descricao LIKE ?"; // monta a consulta com o operador like
